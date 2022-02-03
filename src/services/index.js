@@ -3,11 +3,11 @@ import api from './apiConfig'
 // export const BASE_URL =
 //   'https://climbd-it.herokuapp.com'
 
-const getToken = () => {
-  return new Promise(resolve => {
-      resolve(`Bearer ${localStorage.getItem('token') || null}`)
-  })
-}
+// const getToken = () => {
+//   return new Promise(resolve => {
+//       resolve(`Bearer ${localStorage.getItem('token') || null}`)
+//   })
+// }
 
 export const grabStates = async () => {
   const response = await api.get('/state')

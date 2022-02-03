@@ -8,4 +8,26 @@ const api = axios.create({
     //   : 'https://localhost:8000'
 })
 
+const getToken = () => {
+  return new Promise(resolve => {
+      resolve(`Bearer ${localStorage.getItem('token') || null}`)
+  })
+}
+
+api.interceptors.request.use(
+  async function (config) {
+    if (localStorage.getItem("token")) {
+      config.headers[`Authorization`] = await getToken();
+    }
+    return config;
+  },
+  function (error) {
+    console.log("Request error: ", error);
+    return Promise.reject(error);
+  }
+);
+
+
+
+
 export default api
