@@ -11,6 +11,8 @@ layout {
 
 .body {
   grid-area: b;
+  display: flex;
+  justify-content: center;
 }
 
 .foot {

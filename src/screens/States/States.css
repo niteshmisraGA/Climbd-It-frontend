@@ -1,4 +1,16 @@
-.all-states{
-  border: 10px solid chartreuse;
+.state{
+  border: 2px solid gray;
+  border-radius: ;
   margin-top: 18vh;
+  margin-bottom: 10vh;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.all-states{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

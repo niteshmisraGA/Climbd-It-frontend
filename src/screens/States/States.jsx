@@ -19,7 +19,7 @@ const States = () => {
   },[])
 
   const state = states.map((state, index) =>
-  <div>
+  <div className='state'>
   <Link to={`/state/${state.id}/`}>
     <h1 key = {index}>{state.stateName}</h1>
   </Link>
